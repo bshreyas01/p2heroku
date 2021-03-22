@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/styles.css" />
+        <script type="module" src="../static/js/store.js"></script>
+
+    </head>
+    <body background="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg">
+		<div style="text-align: center;"><h1 style="color: gold; font-family: Great Vibes, cursive; font-size: 50px; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff;"><u>SWAPI CRUD APP</u></h1></div>
+        <br><br>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Character 1</span>
+                    <img class="shop-item-image" src="https://upload.wikimedia.org/wikipedia/en/9/9b/Luke_Skywalker.png">					
+                    <div class="shop-item-details">
+                        <button class="btn btn-primary shop-item-button" type="button" onClick="i1()">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Character 2</span>
+                    <img class="shop-item-image" src="https://upload.wikimedia.org/wikipedia/en/1/1b/Princess_Leia%27s_characteristic_hairstyle.jpg">
+                    <div class="shop-item-details">
+                        <button class="btn btn-primary shop-item-button"type="button" onClick="i2()">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Character 3</span>
+                    <img class="shop-item-image" src="https://upload.wikimedia.org/wikipedia/en/3/39/R2-D2_Droid.png">
+					<div class="shop-item-details">
+                        <button class="btn btn-primary shop-item-button" type="button" onClick="i3()">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Character 4</span>
+                    <img class="shop-item-image" src="https://upload.wikimedia.org/wikipedia/en/7/76/Darth_Vader.jpg">
+                    <div class="shop-item-details">
+                        <button class="btn btn-primary shop-item-button" type="button" onClick="i4()">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Character 5</span>
+                    <img class="shop-item-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/C-3PO_droid.png/220px-C-3PO_droid.png">
+                    <div class="shop-item-details">
+                        <button class="btn btn-primary shop-item-button" type="button" onClick="i5()">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+            </div>
+            <div class="cart-items">
+            </div>
+			<form action="{{ url_for("index")}}" method="post"> 
+			<input type="hidden" id="haha" name="haha" placeholder="selected"> 
+                <button class="btn btn-primary btn-purchase" type="submit" name='fetch'>Fetch</button> </form>
+        </section>
+    </body>
+</html>

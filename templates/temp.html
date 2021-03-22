@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../static/css/styles.css" />
+</head>
+<body background="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg">
+{%for i in range(0, len)%}
+
+    <div class="card" style="background-color: black">
+    <img class="shop-item-image" src="{{ pi[i] }}">
+    <h3>Name:{{ name[i] }}</h3><div style="background-color: rgb(0,0,65)"><br>
+    <p class="title">Height:{{ height[i] }}</p>
+    <p class="title">Mass:{{ mass[i] }}</p>
+    <p class="title">Hair:{{ hair_color[i] }}</p>
+    <p class="title">Eye:{{ eye_color[i] }}</p>
+    <p class="title">Skin:{{ skin_color[i] }}</p>
+    <p class="title">Gender:{{ gender[i] }}</p>
+    <p class="title">Birth Year:{{ birth_year[i] }}</p><br><br></div>
+    </div>
+	<br><hr><hr>
+  
+{%endfor%}
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</body>
+</html>
